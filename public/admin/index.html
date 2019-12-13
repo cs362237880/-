@@ -1,3 +1,10 @@
+<script src="/login/status"></script>
+<script>
+if(!isLogin) {
+  location.href = 'login.html';
+}
+
+</script>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -17,7 +24,7 @@
       <button class="btn btn-default navbar-btn fa fa-bars"></button>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="profile.html"><i class="fa fa-user"></i>个人中心</a></li>
-        <li><a href="login.html"><i class="fa fa-sign-out"></i>退出</a></li>
+        <li><a href="javascript:;" id="logout"><i class="fa fa-sign-out"></i>退出</a></li>
       </ul>
     </nav>
     <div class="container-fluid">
@@ -85,5 +92,24 @@
   <script src="../assets/vendors/jquery/jquery.js"></script>
   <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
+  <!-- <script type="text/javascript">
+  // $('#logout').on('click', function () {
+  //   var isConfirm = confirm('你真的要退出吗?')
+  //   if (isConfirm) {
+  //     $.ajax({
+  //       type: "post",
+  //       url: "/logout",
+  //       success: function () {
+  //         location.href = 'loging.html';
+  //       },
+  //       error:function(){
+  //         alert('退出失败')
+  //       }
+  //     });
+  //   }
+  // });
+  
+  </script> -->
+  <script src="../assets/js/common.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@
         <label for="password" class="sr-only">密码</label>
         <input id="password" type="password" class="form-control" placeholder="密码">
       </div>
-      <button class="btn btn-primary btn-block">登 录</button>
+      <button class="btn btn-primary btn-block" id="loginBtn">登 录</button>
     </div>
   </div>
   <script src="../assets/vendors/jquery/jquery.min.js"></script>
@@ -48,11 +48,9 @@
           password: password
         },
         success: function (response) {
-          // 登录成功 跳转到数据管理的首页面
           location.href = 'index.html';
         },
         error: function () {
-          // 登录失败
           alert('用户名或者密码错误')
         }
       })
